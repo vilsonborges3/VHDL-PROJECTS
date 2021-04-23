@@ -1,0 +1,10 @@
+|M12011EAU020
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+VAR[0] => Mux0.IN5
+VAR[1] => Mux0.IN4
+S <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

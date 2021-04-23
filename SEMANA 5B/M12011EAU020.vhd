@@ -1,0 +1,22 @@
+
+
+ENTITY M12011EAU020 IS 
+PORT (VAR01 : IN BIT_VECTOR ( 2 DOWNTO 0 );
+      S     : OUT BIT );
+END M12011EAU020 ;
+
+ARCHITECTURE CIR OF M12011EAU020 IS 
+
+BEGIN 
+
+WITH VAR01 SELECT
+
+S <= '1' WHEN "000",
+     '0' WHEN "001",
+     '1' WHEN "010",
+     '1' WHEN "011",
+     '1' WHEN "100",
+     '0' WHEN "101",
+     '1' WHEN "110",
+     '0' WHEN "111";
+END CIR;

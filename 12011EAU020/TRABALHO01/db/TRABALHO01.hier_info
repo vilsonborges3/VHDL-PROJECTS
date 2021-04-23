@@ -1,0 +1,13 @@
+|TRABALHO01
+S <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+B => inst3.IN0
+B => inst.IN0
+B => inst8.IN1
+A => inst3.IN1
+A => inst5.IN1
+A => inst9.IN0
+C => inst5.IN0
+C => inst.IN1
+C => inst8.IN0
+
+

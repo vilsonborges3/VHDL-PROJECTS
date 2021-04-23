@@ -1,0 +1,25 @@
+ENTITY V12011EAU020 IS 
+PORT (A, B, C, D : IN BIT ;
+      S          : OUT BIT) ;
+
+END V12011EAU020 ;
+
+ARCHITECTURE CIR OF V12011EAU020 IS 
+
+SIGNAL S1, S2, S3, S4, S5, S6, S7, S8, S9, S10 : BIT ;
+
+BEGIN 
+
+S <= S9 AND S10 ;
+S9 <= NOT(S5 AND S6) ;
+S10 <= NOT(C OR S8) ;
+S6 <= NOT (S1 OR A) ;
+S7 <= S2 OR S3 ;
+S8 <= S4 AND S5 ;
+S1 <= B AND (NOT D) ;
+S2 <= D AND ( NOT B);
+S3 <= C AND D;
+S4 <= (NOT A) OR C;
+S5 <= NOT (B AND D);
+
+END CIR;
