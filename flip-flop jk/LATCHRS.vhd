@@ -1,0 +1,24 @@
+ENTITY LATCHRS IS 
+PORT (PR, CLR, CLK, J, K : IN BIT ;
+		Q: BUFFER BIT );
+		
+END LATCHRS ;
+ARCHITECTURE CIR OF LATCHRS IS 
+BEGIN 
+	
+	PROCESS (PR, CLR, CLK, J, K)
+	BEGIN
+		IF PR = '0' AND CLR = '0' THEN Q <= '0';
+		ELSIF PR = '0' AND CLR = '1' THEN Q <= '1';
+		ELSIF PR = '1' AND CLR = '0' THEN Q <= '0';
+		ELSIF PR = '1' AND CLR = '1' THEN 
+			IF CLK = '0' THEN 
+				IF J = '0' AND K = '0' THEN Q <= Q;
+				ELSIF J = '0' AND K = '1' THEN Q <= '1';
+				ELSIF J = '1' AND K = '0' THEN Q <= '0';
+				ELSIF J = '1' AND K = '1' THEN Q <= NOT (Q);
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+END CIR;
