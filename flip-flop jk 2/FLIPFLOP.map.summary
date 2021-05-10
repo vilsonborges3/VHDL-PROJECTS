@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 10 16:01:40 2021
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : FLIPFLOP
+Top-level Entity Name : FLIPFLOP
+Family : Cyclone II
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
