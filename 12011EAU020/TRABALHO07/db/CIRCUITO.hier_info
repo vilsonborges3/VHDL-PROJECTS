@@ -1,0 +1,14 @@
+|CIRCUITO
+A[0] => Mux0.IN19
+A[0] => Mux1.IN19
+A[1] => Mux0.IN18
+A[1] => Mux1.IN18
+A[2] => Mux0.IN17
+A[2] => Mux1.IN17
+A[3] => Mux0.IN16
+A[3] => Mux1.IN16
+CLRN => Q~reg0.ACLR
+CLKN => Q~reg0.CLK
+Q << Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
