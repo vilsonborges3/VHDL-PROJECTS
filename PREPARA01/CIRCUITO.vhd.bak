@@ -1,0 +1,46 @@
+--PREPARAÇÃO
+
+ENTITY CIRCUITO IS 
+PORT(A: IN BIT_VECTOR (1 DOWNTO 0);
+     INICIA: IN BIT ;
+     S: OUT BIT);
+END CIRCUITO;
+
+ARCHITECTURE CIR1 OF CIRCUITO IS
+
+SIGNAL PRN, CLRN, CLKN, J, K, Q : BIT ;
+
+BEGIN 
+
+--PROJETO MUX 4X1
+WITH A SELECT
+CLKN <= '0' WHEN "00" ,
+       '1' WHEN "01" ,
+       '1' WHEN "10" ,
+       '1' WHEN "11" ;
+       
+--PROJETO FLIP-FLOP JK MESTRE ESCRAVO
+PRN <= '1';
+CLRN <= INICIA;
+J <= '1';
+K <= '1';
+
+	PROCESS ( PRN, CLRN, CLKN )
+	BEGIN
+		IF     PRN = '0' THEN Q <= '1' ;
+		ELSIF CLRN = '0' THEN Q <= '0' ;
+		ELSIF CLKN = '0' AND CLKN 'EVENT THEN 
+			IF    J = '1' AND K = '1' THEN Q <= NOT Q ;
+			ELSIF J = '1' AND K = '0' THEN Q <= '1' ;
+			ELSIF J = '0' AND K = '1' THEN Q <= '0' ;
+            END IF;
+        END IF ;
+    END PROCESS ;
+    Q <= Q ;
+--PORTAS LOGICAS
+S <= (Q XNOR A(1)) XOR ((NOT Q) NAND A(1)) OR A(0);
+END CIR1 ;
+
+
+
+

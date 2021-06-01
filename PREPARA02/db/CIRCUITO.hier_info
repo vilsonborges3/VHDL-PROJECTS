@@ -1,0 +1,101 @@
+|CIRCUITO
+INICIA => AUX1.IN1
+INICIA => FLIPFLOP:FF3.CLRN
+INICIA => FLIPFLOP:FF4.CLRN
+INICIA => FLIPFLOP:FF5.CLRN
+CLOCK => FLIPFLOP:FF0.CLKN
+E => Z0.DATAB
+E => Z1.DATAB
+E => Z2.DATAB
+E => Z3.DATAB
+E => Z4.DATAB
+E => Z5.DATAB
+E => Z6.DATAB
+E => Z7.DATAB
+S <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF0
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF1
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF2
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF3
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF4
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CIRCUITO|FLIPFLOP:FF5
+PRN => Q.IN0
+PRN => Q~reg0.PRESET
+CLRN => Q.IN1
+CLKN => Q~reg0.CLK
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
